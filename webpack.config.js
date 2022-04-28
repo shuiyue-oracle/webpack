@@ -34,5 +34,10 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: `css/[name]_[contenthash:8].css`
     })
-  ]
+  ],
+  devServer: {
+    static: {
+      directory: path.join(__dirname, './src')
+    }
+  }
 };
